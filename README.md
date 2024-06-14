@@ -17,7 +17,7 @@ Site da Hamburgueria Gourmet Burger<br/>
 <br>
 
 <p align="center">
-  <img alt="Site Gourmet Burger" <img src=".github/Desktop" width="100%">
+  <img alt="Site Gourmet Burger" <img src=".github/Desktop.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
