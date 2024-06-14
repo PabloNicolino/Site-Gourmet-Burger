@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="shortcut icon" href="assets/hamburguer.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./styles/output.css" />
+
+  <title>Gourmet Burger</title>
+</head>
+<body>
+  
+  <!-- HEADER-->
+<header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+  <div class="w-full h-full flex flex-col justify-center items-center">
+    <img 
+    src="./assets/Logo.png" 
+    alt="Logo devBurguer"
+    class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+    />
+    <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+      Gourmet Burger
+    </h1>
+
+    <span class="text-white font-medium">Rua das Fiandeiras, Vila Olímpia, São Paulo - SP</span>
+
+    <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+      <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+    </div>
+
+  </div>
+</header>
+  <!--FIM HEADER-->
+  
+  <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+    Conheça nosso menu
+  </h2>
+
+  <!-- INICIO MANU -->
+   <div id="menu">
+    <div class="mx-auto max-w-7xl px-2 my-2 mb-5">
+      <h2 class="font-bold text-3xl">
+        Hambúrgueres
+      </h2>
+    </div>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+      <!--PRODUTO ITEM 1-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-1.png" 
+        alt="Smash Duplo"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Smash Duplo</p>
+          <p class="text-sm justify-between">Pão brioche, 2x smash 90g, 2x queijo cheddar, ketchup, mostarda, maionese e salada.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3 ">
+            <p class="font-bold text-lg">R$ 16.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Smash Duplo" 
+            data-price="16.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 1 -->
+
+      <!--PRODUTO ITEM 2-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-2.png" 
+        alt="Smash Duplo Bacon"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Smash Duplo Bacon</p>
+          <p class="text-sm">Pão brioche, 2x smash 100g, 2x bacon, 2x queijo cheddar, mostarda, ketchup, maionese e tomate.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3 ">
+            <p class="font-bold text-lg">R$ 18.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Smash Duplo Bacon" 
+            data-price="18.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 2 -->
+
+      <!--PRODUTO ITEM 3-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-3.png" 
+        alt="Smash Simples"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Smash Simples</p>
+          <p class="text-sm">Pão brioche, 2x blend 90g, 2x queijo cheddar ou prato, mostarda, ketchup e maionese.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 15.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Smash Simples" 
+            data-price="15.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 3 -->
+
+      <!--PRODUTO ITEM 4-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-4.png" 
+        alt="Smash Frango"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Smash Frango</p>
+          <p class="text-sm">Pão prime, 100g frango, alface, tomate, cebola roxa, queijo prato, mostarda e  ketchup.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 16.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Smash Frango" 
+            data-price="16.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 4 -->
+
+      <!--PRODUTO ITEM 5-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-5.png" 
+        alt="Singular"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Singular</p>
+          <p class="text-sm">Pão prime, blend 150g, 2x queijo cheddar ou prato, cebola roxa, tomate e salada.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 17.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Singular" 
+            data-price="17.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 5 -->
+
+      <!--PRODUTO ITEM 6-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-6.png" 
+        alt="Singular 2"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Singular 2</p>
+          <p class="text-sm">Pão prime, blend 150g, 2x queijo prato, cebola roxa, tomate, salada, ketchup e maionese.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 18.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Singular 2" 
+            data-price="18.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 6 -->
+
+      <!--PRODUTO ITEM 7-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-7.png" 
+        alt="Glorioso"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Glorioso</p>
+          <p class="text-sm">Pão brioche, blend 150g, queijo cheddar, 4x anéis de cebola, ketchup e maionese.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 19.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Glorioso" 
+            data-price="19.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 7 -->
+
+      <!--PRODUTO ITEM 8-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-8.png" 
+        alt="Smash Vegan"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Smash Vegan</p>
+          <p class="text-sm"> Pão prime, blend vegetal 150g, salada, ketchup, mostarda, maionese e cenoura.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 19.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Smash Vegan" 
+            data-price="19.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 8 -->
+
+      <!--PRODUTO ITEM 9-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-9.jpeg" 
+        alt="Hamburguer Duplo Kids"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Triplo Smash</p>
+          <p class="text-sm">Pão prime, 3x blend 150g, 2x queijo cheddar, 2x queijo prato, salada, tomate, ketchup e mostarda.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 22.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Hamburguer Duplo Kids" 
+            data-price="22.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 9 -->
+
+      <!--PRODUTO ITEM 10-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-10.png" 
+        alt="Favorito do Gourmet"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Favorito do Gourmet</p>
+          <p class="text-sm">Pão prime, 1x blend 150g, 2x queijo cheddar ou 2x queijo prato, cebola roxa,tomate, ketchup e mostarda.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 18.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Favorito do Gourmet" 
+            data-price="18.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 10 -->
+
+      <!--PRODUTO ITEM 11-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-11.png" 
+        alt="Smash Duplo Clássico"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">2x Smash Duplo Clássico</p>
+          <p class="text-sm">Pão prime, 1x blend 120g, 2x queijo cheddar ou 2x queijo prato, tomate, salada, ketchup e mostarda.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 25.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Smash Duplo Clássico" 
+            data-price="25.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 11 -->
+
+      <!--PRODUTO ITEM 12-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/hamb-12.png" 
+        alt="Smash Gourmet"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div>
+          <p class="font-bold">Smash Gourmet</p>
+          <p class="text-sm">Pão prime, 1x blend 130g, 2x queijo cheddar ou 2x queijo prato, bacon, salada, ketchup, mostarda e maionese.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 20.90</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Smash Gourmet" 
+            data-price="20.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM PRODUTO ITEM 12 -->
+    </main>
+
+    <div class="mx-auto max-w-7xl px-2 my-2 mb-5">
+      <h2 class="font-bold text-3xl">
+        Bedidas
+      </h2>
+    </div>
+
+    <!--GRID BEBIBAS-->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+      <!--BEBIDA ITEM 1-->
+      <div class="flex gap-2 w-full">
+        <img 
+        src="./assets/refri-1.png" 
+        alt="Coca-Coca Lata"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Coca-Coca</p>
+          <p class="text-sm">Refrigerante</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5,00</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Coca-Coca Lata" 
+            data-price="5,00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM BEBIDA ITEM 1 -->
+
+      <!--BEBIDA ITEM 2-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/refri-2.png" 
+        alt="Guaraná Lata"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Guaraná</p>
+          <p class="text-sm">Refrigerante</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5,00</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Guaraná Lata" 
+            data-price="5,00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM BEBIDA ITEM 2 -->
+
+      <!--BEBIDA ITEM 3-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/refri-3.png" 
+        alt="Pepsi Lata"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Pepsi</p>
+          <p class="text-sm">Refrigerante</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5,00</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Pepsi Lata" 
+            data-price="5,00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM BEBIDA ITEM 3 -->
+
+      <!--BEBIDA ITEM 4-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/refri-4.png" 
+        alt="Fanta Uva Lata"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Fanta Uva</p>
+          <p class="text-sm">Refrigerante</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5,00</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Fanta Uva" 
+            data-price="5,00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM BEBIDA ITEM 4 -->
+
+      <!--BEBIDA ITEM 5-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/refri-5.png" 
+        alt="Fanta Guaraná Lata"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Fanta Guaraná</p>
+          <p class="text-sm">Refrigerante</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5,00</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Fanta Guaraná Lata" 
+            data-price="5,00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM BEBIDA ITEM 5 -->
+
+      <!--BEBIDA ITEM 6-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/refri-6.png" 
+        alt="Fanta Laranja Lata"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Fanta Laranja</p>
+          <p class="text-sm">Refrigerante</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5,00</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Fanta Laranja Lata" 
+            data-price="5,00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM BEBIDA ITEM 6 -->
+
+      <!--BEBIDA ITEM 7-->
+      <div class="flex gap-2">
+        <img 
+        src="./assets/Guaravita.png" 
+        alt="Guaravita Tradicional"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Guaravita Tradicional</p>
+          <p class="text-sm">Guaraná Natural.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 2,50</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+            data-name="Guaravita Tradicional" 
+            data-price="2,50">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--FIM BEBIDA ITEM 7 -->
+
+      <!--BEBIDA ITEM 8-->
+    <div class="flex gap-2">
+      <img 
+      src="./assets/Guaraviton.png" 
+      alt="Guaravita Tradicional"
+      class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+      />
+
+      <div class="w-full">
+        <p class="font-bold">Guaraviton</p>
+        <p class="text-sm">Guaraná Natural.</p>
+
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg">R$ 4,00</p>
+          <button 
+          class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+          data-name="Guaraviton" 
+          data-price="4,00">
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--FIM BEBIDA ITEM 8 -->
+
+    </div>
+
+    <!-- FIM GRID BEBIBAS-->
+
+   </div>
+  <!-- FIM MANU-->
+
+  <!-- MODAL CARD -->
+   <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+      <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+      <div id="cart-items" class="flex justify-between md-2 flex-col"></div>
+
+      <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+      <p class="font-bold mt-2">Endereço de entrega:</p>
+      <input type="text" 
+      placeholder="Digite seu endereço completo" 
+      id="address" 
+      class="w-full border-2 p-1 rounded my-1"/>
+
+      <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+      <div class="flex items-center justify-between mt-5 w-full">
+        <button id="close-modal-btn">Fechar</button>
+        <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+      </div>
+
+    </div>
+
+   </div>
+   <!-- FIM MODAL CARD -->
+
+  <!-- BUTTON CARD FOOTER-->
+   <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40  flex items-center justify-center">
+    <button 
+    class="flex items-center gap-2 text-white font-bold"
+    id="cart-btn"
+    >
+      (<span id="cart-count">0</span>)
+      Veja meu carrinho
+   </footer>
+  <!-- BUTTON CARD FOOTER-->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
