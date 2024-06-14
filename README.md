@@ -1,4 +1,4 @@
-<h1 align="center"> DevLinks </h1>
+<h1 align="center"> Gourmet Burger </h1>
 
 <p align="center">
 Site da Hamburgueria Gourmet Burger<br/>
@@ -17,7 +17,7 @@ Site da Hamburgueria Gourmet Burger<br/>
 <br>
 
 <p align="center">
-  <img alt="Site Gourmet Burger" src=".github/Desktop" width="100%">
+  <img alt="Site Gourmet Burger" <img src=".github/Desktop" width="100%">
 </p>
 
 ## 🚀 Tecnologias
